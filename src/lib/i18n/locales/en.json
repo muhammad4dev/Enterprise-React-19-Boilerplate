@@ -1,0 +1,34 @@
+{
+  "app": {
+    "title": "Enterprise App"
+  },
+  "auth": {
+    "login": "Login",
+    "logout": "Logout",
+    "email": "Email Address",
+    "password": "Password",
+    "signIn": "Sign In",
+    "welcomeBack": "Welcome Back"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "admin": "Admin",
+    "users": "Users"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "accessDenied": "Access Denied",
+    "goBack": "Go Back"
+  },
+  "forbidden": {
+    "title": "Access Denied",
+    "message": "You do not have permission to access this resource.",
+    "goToDashboard": "Go to Dashboard"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "message": "Sorry, the page you are looking for does not exist.",
+    "goToDashboard": "Go to Dashboard"
+  }
+}
