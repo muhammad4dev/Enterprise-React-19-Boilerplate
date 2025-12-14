@@ -1,0 +1,12 @@
+
+node_modules
+dist
+dev-dist
+dist-ssr
+coverage
+.git
+.vscode
+public
+stats.html
+*.min.js
+pnpm-lock.yaml
