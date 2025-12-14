@@ -51,12 +51,13 @@ export default defineConfig([
         version: "detect",
       },
       "import/resolver": {
-        node: {
-          extensions: [".js", ".jsx", ".ts", ".tsx"],
-        },
         typescript: {
+          alwaysTryTypes: true,
           project: "./tsconfig.app.json",
         },
+      },
+      "import/parsers": {
+        "@typescript-eslint/parser": [".ts", ".tsx"],
       },
     },
     rules: {
