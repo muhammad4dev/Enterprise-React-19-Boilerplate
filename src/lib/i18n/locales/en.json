@@ -30,5 +30,10 @@
     "title": "Page Not Found",
     "message": "Sorry, the page you are looking for does not exist.",
     "goToDashboard": "Go to Dashboard"
+  },
+  "pwa": {
+    "installMessage": "Install this app for a better experience!",
+    "install": "Install",
+    "dismiss": "Dismiss"
   }
 }
