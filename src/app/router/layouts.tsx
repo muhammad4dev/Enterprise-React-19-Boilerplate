@@ -13,6 +13,8 @@ import i18n, {
 import { AppLayout } from "@/shared/components/layouts/AppLayout";
 import { PublicLayout } from "@/shared/components/layouts/PublicLayout";
 import { NetworkStatus } from "@/shared/components/ui/NetworkStatus";
+import { NotificationManager } from "@/shared/components/ui/NotificationManager";
+import { NotificationToast } from "@/shared/components/ui/NotificationToast";
 import { PWAInstallPrompt } from "@/shared/components/ui/PWAInstallPrompt";
 import { PWAUpdatePrompt } from "@/shared/components/ui/PWAUpdatePrompt";
 
@@ -25,6 +27,8 @@ export const rootRoute = createRootRoute({
       <NetworkStatus />
       <PWAUpdatePrompt />
       <PWAInstallPrompt />
+      <NotificationToast />
+      <NotificationManager />
     </>
   ),
 });

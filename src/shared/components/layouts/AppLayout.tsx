@@ -24,6 +24,7 @@ import { useLogout } from "@/lib/api/mutations";
 import { IfAllowed } from "@/lib/rbac/components";
 import { AppLink } from "@/shared/components/ui/AppLink";
 import { LocaleSwitcher } from "@/shared/components/ui/LocaleSwitcher";
+import { NotificationCenter } from "@/shared/components/ui/NotificationCenter";
 import { useAppNavigate } from "@/shared/hooks/useAppNavigate";
 import { useAuthStore } from "@/stores/authStore";
 const DRAWER_WIDTH = 240;
@@ -105,6 +106,8 @@ export const AppLayout: React.FC = () => {
           </Typography>
 
           <LocaleSwitcher />
+
+          <NotificationCenter />
 
           <Button color="inherit" onClick={handleLogout}>
             {t("auth.logout")}
