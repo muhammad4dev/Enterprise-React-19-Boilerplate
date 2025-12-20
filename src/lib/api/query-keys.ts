@@ -11,6 +11,9 @@ export const queryKeys = {
   dashboard: {
     stats: ["dashboard", "stats"] as const,
   },
+  notifications: {
+    all: ["notifications"] as const,
+  },
 } as const;
 
 // Type helpers for query data

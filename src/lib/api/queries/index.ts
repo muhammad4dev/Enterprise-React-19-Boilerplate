@@ -1,1 +1,3 @@
 export { useDashboardStats } from "./useDashboard";
+export { useNotifications } from "./useNotifications";
+export type { NotificationHistoryItem } from "./useNotifications";
