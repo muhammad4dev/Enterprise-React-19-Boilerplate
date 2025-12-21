@@ -5,7 +5,6 @@ import { useNotificationStore } from "@/stores/notificationStore";
 
 import { NotificationToast } from "../NotificationToast";
 
-
 // Mock the store
 vi.mock("@/stores/notificationStore");
 

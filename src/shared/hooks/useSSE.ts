@@ -19,7 +19,7 @@ interface UseSSEOptions<T> {
  */
 export function useSSE<T = unknown>(
   url: string,
-  options: UseSSEOptions<T> = {}
+  options: UseSSEOptions<T> = {},
 ): {
   data: T | null;
   status: SSEStatus;

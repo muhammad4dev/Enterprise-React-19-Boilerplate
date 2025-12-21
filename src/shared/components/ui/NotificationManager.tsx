@@ -77,7 +77,7 @@ export function NotificationManager() {
             error.name === "InvalidStateError"
           ) {
             console.warn(
-              "Push registration failed with InvalidStateError. Unsubscribing and retrying..."
+              "Push registration failed with InvalidStateError. Unsubscribing and retrying...",
             );
             const registration = await navigator.serviceWorker.ready;
             const subscription =
@@ -94,7 +94,7 @@ export function NotificationManager() {
 
       await doRegister(retry);
     },
-    [urlBase64ToUint8Array]
+    [urlBase64ToUint8Array],
   );
 
   // Request permission on mount
@@ -175,7 +175,7 @@ export function NotificationManager() {
 
       showSystemNotification();
     },
-    [addNotification, addLocalNotification]
+    [addNotification, addLocalNotification],
   );
 
   useSSE<Omit<Notification, "id">>(sseUrl, {

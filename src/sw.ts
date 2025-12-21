@@ -38,7 +38,7 @@ registerRoute(
         maxAgeSeconds: 60 * 60 * 24 * 365, // 1 year
       }),
     ],
-  })
+  }),
 );
 
 // Cache Google Fonts Webfonts
@@ -55,7 +55,7 @@ registerRoute(
         maxAgeSeconds: 60 * 60 * 24 * 365, // 1 year
       }),
     ],
-  })
+  }),
 );
 
 // Handle Push Notifications
@@ -88,7 +88,7 @@ self.addEventListener("push", (event) => {
               },
             });
           });
-        })
+        }),
     );
 
     event.waitUntil(self.registration.showNotification(title, options));
@@ -117,6 +117,6 @@ self.addEventListener("notificationclick", (event) => {
         if (self.clients.openWindow) {
           return self.clients.openWindow(urlToOpen);
         }
-      })
+      }),
   );
 });

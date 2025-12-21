@@ -18,8 +18,8 @@ export const useMarkNotificationAsRead = () => {
         queryKeys.notifications.all,
         (oldData) =>
           oldData?.map((item) =>
-            item.id === id ? { ...item, read: true } : item
-          )
+            item.id === id ? { ...item, read: true } : item,
+          ),
       );
     },
   });
