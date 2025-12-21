@@ -1,6 +1,6 @@
 import path from "path";
 
-import basicSsl from "@vitejs/plugin-basic-ssl";
+// import basicSsl from "@vitejs/plugin-basic-ssl";
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 import { VitePWA } from "vite-plugin-pwa";
@@ -13,12 +13,15 @@ export default defineConfig({
         plugins: [["babel-plugin-react-compiler", { target: "19" }]],
       },
     }),
-    basicSsl({
-      name: "ReactStack Dev Server",
-      domains: ["*.localhost"],
-    }),
+    // basicSsl({
+    //   name: "ReactStack Dev Server",
+    //   domains: ["*.localhost"],
+    // }),
     VitePWA({
       registerType: "prompt",
+      strategies: "injectManifest",
+      srcDir: "src",
+      filename: "sw.ts",
       includeAssets: [
         "favicon-64.png",
         "apple-touch-icon.png",
@@ -26,6 +29,7 @@ export default defineConfig({
         "pwa-512x512.png",
       ],
       manifest: {
+        id: "/",
         name: "Enterprise React Stack",
         short_name: "ReactStack",
         description:
@@ -54,43 +58,29 @@ export default defineConfig({
             purpose: "maskable",
           },
         ],
-      },
-      workbox: {
-        cleanupOutdatedCaches: true,
-        globPatterns: ["**/*.{js,css,html,ico,png,svg,woff2}"],
-        runtimeCaching: [
+        screenshots: [
           {
-            urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
-            handler: "CacheFirst",
-            options: {
-              cacheName: "google-fonts-cache",
-              expiration: {
-                maxEntries: 10,
-                maxAgeSeconds: 60 * 60 * 24 * 365, // 1 year
-              },
-              cacheableResponse: {
-                statuses: [0, 200],
-              },
-            },
+            src: "pwa-512x512.png",
+            sizes: "512x512",
+            type: "image/png",
+            form_factor: "wide",
+            label: "Desktop Home Screen",
           },
           {
-            urlPattern: /^https:\/\/fonts\.gstatic\.com\/.*/i,
-            handler: "CacheFirst",
-            options: {
-              cacheName: "gstatic-fonts-cache",
-              expiration: {
-                maxEntries: 10,
-                maxAgeSeconds: 60 * 60 * 24 * 365, // 1 year
-              },
-              cacheableResponse: {
-                statuses: [0, 200],
-              },
-            },
+            src: "pwa-512x512.png",
+            sizes: "512x512",
+            type: "image/png",
+            label: "Mobile Home Screen",
           },
         ],
       },
+      injectManifest: {
+        globPatterns: ["**/*.{js,css,html,ico,png,svg,woff2}"],
+      },
+
       devOptions: {
         enabled: true,
+        type: "module",
       },
     }),
   ],

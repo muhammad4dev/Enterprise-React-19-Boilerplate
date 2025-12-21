@@ -35,5 +35,12 @@
     "installMessage": "ثبّت هذا التطبيق للحصول على تجربة أفضل!",
     "install": "تثبيت",
     "dismiss": "إغلاق"
+  },
+  "notifications": {
+    "title": "الإشعارات",
+    "recent": "الأخيرة",
+    "markAllRead": "تحديد الكل كمقروء",
+    "clearAll": "مسح الكل",
+    "empty": "ليس لديك إشعارات"
   }
 }

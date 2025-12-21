@@ -35,5 +35,12 @@
     "installMessage": "Install this app for a better experience!",
     "install": "Install",
     "dismiss": "Dismiss"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "recent": "Recent",
+    "markAllRead": "Mark all read",
+    "clearAll": "Clear all",
+    "empty": "No notifications"
   }
 }

@@ -20,6 +20,10 @@ export default defineConfig([
       "dev-dist",
       "coverage",
       "node_modules",
+      // ignore test files
+      "**/__tests__/**",
+      "**/*.test.ts",
+      "**/*.test.tsx",
     ],
   },
   js.configs.recommended,

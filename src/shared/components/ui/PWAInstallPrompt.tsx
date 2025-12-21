@@ -117,9 +117,9 @@ export const PWAInstallPrompt: React.FC = () => {
       const { outcome } = await installPrompt.userChoice;
 
       if (outcome === "accepted") {
-        console.log("User accepted the PWA install prompt");
+        console.warn("User accepted the PWA install prompt");
       } else {
-        console.log("User dismissed the PWA install prompt");
+        console.warn("User dismissed the PWA install prompt");
         // Mark as dismissed for 7 days
         localStorage.setItem(DISMISS_STORAGE_KEY, Date.now().toString());
       }
