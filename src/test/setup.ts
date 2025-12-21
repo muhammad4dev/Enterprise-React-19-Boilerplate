@@ -4,9 +4,9 @@ import { vi } from "vitest";
 // Mock EventSource globally
 class MockEventSource {
   url: string;
-  onmessage: ((ev: MessageEvent) => any) | null = null;
-  onopen: ((ev: Event) => any) | null = null;
-  onerror: ((ev: Event) => any) | null = null;
+  onmessage: ((ev: MessageEvent) => void) | null = null;
+  onopen: ((ev: Event) => void) | null = null;
+  onerror: ((ev: Event) => void) | null = null;
   readyState: number = 0;
 
   constructor(url: string) {
